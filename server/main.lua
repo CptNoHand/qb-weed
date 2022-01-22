@@ -148,7 +148,6 @@ end)
 RegisterNetEvent('qb-weed:server:harvestPlant', function(house, amount, plantName, plantId)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local weedBag = Player.Functions.GetItemByName('empty_weed_bag')
     local sndAmount = math.random(12, 16)
 
     if weedBag ~= nil then
@@ -157,9 +156,8 @@ RegisterNetEvent('qb-weed:server:harvestPlant', function(house, amount, plantNam
                 local result = MySQL.Sync.fetchAll(
                     'SELECT * FROM house_plants WHERE plantid = ? AND building = ?', {plantId, house})
                 if result[1] ~= nil then
-                    Player.Functions.AddItem('weed_' .. plantName .. '_seed', amount)
-                    Player.Functions.AddItem('weed_' .. plantName, sndAmount)
-                    Player.Functions.RemoveItem('empty_weed_bag', sndAmount)
+                    Player.Functions.AddItem('wetbud', '_seed', amount)
+                    Player.Functions.AddItem('wetbud', sndAmount)
                     MySQL.Async.execute('DELETE FROM house_plants WHERE plantid = ? AND building = ?',
                         {plantId, house})
                     TriggerClientEvent('QBCore:Notify', src, 'The plant has been harvested', 'success', 3500)

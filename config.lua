@@ -15,14 +15,13 @@ Config.WeedProcessing = {
 
 -- Here you get the dry bud
 Config.WeedExtraction = {
-[1] = {["Coords"] = vector3(1442.388, 6331.253, 24.0)}
-    
+    [1] = {["Coords"] = vector3(1442.388, 6331.253, 24.0)}   
 }
 
 QBWeed.Plants = {
     ["og-kush"] = {
         ["label"] = "OGKush 2g",
-        ["item"] = "weed_og-kush",
+        ["item"] = "wetbud",
         ["stages"] = {
             ["stage-a"] = "bkr_prop_weed_01_small_01c",
             ["stage-b"] = "bkr_prop_weed_01_small_01b",
@@ -36,7 +35,7 @@ QBWeed.Plants = {
     },
     ["amnesia"] = {
         ["label"] = "Amnesia 2g",
-        ["item"] = "weed_amnesia",
+        ["item"] = "wetbud",
         ["stages"] = {
             ["stage-a"] = "bkr_prop_weed_01_small_01c",
             ["stage-b"] = "bkr_prop_weed_01_small_01b",
@@ -50,7 +49,7 @@ QBWeed.Plants = {
     },
     ["skunk"] = {
         ["label"] = "Skunk 2g",
-        ["item"] = "weed_skunk",
+        ["item"] = "wetbud",
         ["stages"] = {
             ["stage-a"] = "bkr_prop_weed_01_small_01c",
             ["stage-b"] = "bkr_prop_weed_01_small_01b",
@@ -64,7 +63,7 @@ QBWeed.Plants = {
     },
     ["ak47"] = {
         ["label"] = "AK47 2g",
-        ["item"] = "weed_ak47",
+        ["item"] = "wetbud",
         ["stages"] = {
             ["stage-a"] = "bkr_prop_weed_01_small_01c",
             ["stage-b"] = "bkr_prop_weed_01_small_01b",
@@ -78,7 +77,7 @@ QBWeed.Plants = {
     },
     ["purple-haze"] = {
         ["label"] = "Purple Haze 2g",
-        ["item"] = "weed_purple-haze",
+        ["item"] = "wetbud",
         ["stages"] = {
             ["stage-a"] = "bkr_prop_weed_01_small_01c",
             ["stage-b"] = "bkr_prop_weed_01_small_01b",
@@ -92,7 +91,7 @@ QBWeed.Plants = {
     },
     ["white-widow"] = {
         ["label"] = "White Widow 2g",
-        ["item"] = "weed_white-widow",
+        ["item"] = "wetbud",
         ["stages"] = {
             ["stage-a"] = "bkr_prop_weed_01_small_01c",
             ["stage-b"] = "bkr_prop_weed_01_small_01b",

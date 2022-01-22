@@ -1,3 +1,4 @@
+Config = {}
 QBWeed = {}
 QBWeed.HarvestTime = 40 * 1000
 

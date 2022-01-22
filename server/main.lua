@@ -150,29 +150,21 @@ RegisterNetEvent('qb-weed:server:harvestPlant', function(house, amount, plantNam
     local Player = QBCore.Functions.GetPlayer(src)
     local sndAmount = math.random(12, 16)
 
-    if weedBag ~= nil then
-        if weedBag.amount >= sndAmount then
-            if house ~= nil then
-                local result = MySQL.Sync.fetchAll(
-                    'SELECT * FROM house_plants WHERE plantid = ? AND building = ?', {plantId, house})
-                if result[1] ~= nil then
-                    Player.Functions.AddItem('wetbud', '_seed', amount)
-                    Player.Functions.AddItem('wetbud', sndAmount)
-                    MySQL.Async.execute('DELETE FROM house_plants WHERE plantid = ? AND building = ?',
-                        {plantId, house})
-                    TriggerClientEvent('QBCore:Notify', src, 'The plant has been harvested', 'success', 3500)
-                    TriggerClientEvent('qb-weed:client:refreshHousePlants', -1, house)
-                else
-                    TriggerClientEvent('QBCore:Notify', src, 'This plant no longer exists?', 'error', 3500)
-                end
-            else
-                TriggerClientEvent('QBCore:Notify', src, 'House Not Found', 'error', 3500)
-            end
+    if house ~= nil then
+        local result = MySQL.Sync.fetchAll(
+            'SELECT * FROM house_plants WHERE plantid = ? AND building = ?', {plantId, house})
+        if result[1] ~= nil then
+            Player.Functions.AddItem('wetbud', '_seed', amount)
+            Player.Functions.AddItem('wetbud', sndAmount)
+            MySQL.Async.execute('DELETE FROM house_plants WHERE plantid = ? AND building = ?',
+                {plantId, house})
+            TriggerClientEvent('QBCore:Notify', src, 'The plant has been harvested', 'success', 3500)
+            TriggerClientEvent('qb-weed:client:refreshHousePlants', -1, house)
         else
-            TriggerClientEvent('QBCore:Notify', src, "You Don't Have Enough Resealable Bags", 'error', 3500)
+            TriggerClientEvent('QBCore:Notify', src, 'This plant no longer exists?', 'error', 3500)
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, "You Don't Have Enough Resealable Bags", 'error', 3500)
+        TriggerClientEvent('QBCore:Notify', src, 'House Not Found', 'error', 3500)
     end
 end)
 

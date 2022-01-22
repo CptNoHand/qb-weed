@@ -2,6 +2,14 @@ Config = {}
 QBWeed = {}
 QBWeed.HarvestTime = 40 * 1000
 
+---- ** ITEM CONFIG ** ----
+Config.DryWeed = "drybud"
+Config.WeedItem = "wetbud"
+Config.JointItem = 'rolling_paper' -- What item is needed to roll joints?
+Config.WeedBag = 'empty_weed_bag' -- What item is needed to Bag weed?
+Config.WeedInBag = 'weed_bag'
+Config.FinalJoint = "joint"
+
 ---- ** TIME CONFIG ** ----
 Config.ProcessTime = 2500 -- This is in Milliseconds so this is 2.5 seconds
 

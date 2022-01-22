@@ -1,6 +1,24 @@
 QBWeed = {}
 QBWeed.HarvestTime = 40 * 1000
 
+---- ** TIME CONFIG ** ----
+Config.ProcessTime = 2500 -- This is in Milliseconds so this is 2.5 seconds
+
+---- ** Process CONFIG ** ----
+Config.MaxProcess = 10 -- How many items can they process at a time?
+
+---- ** This uses QB Target Box Zones ** ----
+-- Here you process the weed into baggies etc.
+Config.WeedProcessing = {
+    [1] = {["Coords"] = vector3(2328.81, 2571.0, 46.5)}
+}
+
+-- Here you get the dry bud
+Config.WeedExtraction = {
+[1] = {["Coords"] = vector3(1442.388, 6331.253, 24.0)}
+    
+}
+
 QBWeed.Plants = {
     ["og-kush"] = {
         ["label"] = "OGKush 2g",

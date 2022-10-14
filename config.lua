@@ -11,10 +11,10 @@ Config.WeedInBag = 'weed_bag'
 Config.FinalJoint = "joint"
 
 ---- ** TIME CONFIG ** ----
-Config.ProcessTime = 2500 -- This is in Milliseconds so this is 2.5 seconds
+Config.ProcessTime = 12500 -- This is in Milliseconds so this is 2.5 seconds
 
 ---- ** Process CONFIG ** ----
-Config.MaxProcess = 10 -- How many items can they process at a time?
+Config.MaxProcess = 6 -- How many items can they process at a time?
 
 ---- ** This uses QB Target Box Zones ** ----
 -- Here you process the weed into baggies etc.
